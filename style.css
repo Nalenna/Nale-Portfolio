@@ -1,0 +1,524 @@
+.brand {
+  display: flex;
+  gap: 18px;
+  width: 70%;
+  align-items: center;
+  margin-left: -120px;
+}
+
+.brand:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  text-shadow:
+    0 0 4px #00eaff,
+    0 0 8px #00eaff,
+    0 0 12px #00eaff;
+  box-shadow: 0 0 25px #00eaff, 0 0 60px #0088ff;
+  transform: translateY(-4px);
+}
+
+nav a {
+  color: #00eaff;             /* text color */
+  text-decoration: none;       /* remove underline */
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 12px;
+  transition: all 0.2s ease;
+
+  /* glow effect */
+  text-shadow:
+    0 0 4px #00eaff,
+    0 0 8px #00eaff,
+    0 0 12px #00eaff;
+}
+
+nav a:hover {
+  text-shadow:
+    0 0 8px #00eaff,
+    0 0 16px #00eaff,
+    0 0 28px #00eaff;
+  transform: scale(1.05); /* optional: slightly enlarge on hover */
+}
+
+.logo {
+  /* Subtle glassy glow */
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  
+  /* Soft glow - not overwhelming */
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(102, 126, 234, 0.2);
+  
+  /* Keep it compact */
+  padding: 20px 24px;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 18px;
+  color: #667eea;
+  
+  /* Subtle text glow */
+  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  
+  animation: subtleGlow 3s ease-in-out infinite;
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.1),
+      0 0 20px rgba(102, 126, 234, 0.5),
+      0 0 40px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.1),
+      0 0 30px rgba(102, 126, 234, 0.7),
+      0 0 60px rgba(102, 126, 234, 0.5);
+  }
+}
+
+/* Gentle hover effect only */
+.logo:hover {
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Remove the pulsing animation for cleaner look */
+/* If you want a VERY subtle pulse, use this: */
+.logo {
+  animation: subtleGlow 4s ease-in-out infinite;
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.1),
+      0 0 20px rgba(102, 126, 234, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.1),
+      0 0 25px rgba(102, 126, 234, 0.3);
+  }
+}
+
+.banner-slideshow {
+  position: relative;
+  width: 100%;
+  max-height: 625px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.slides-container {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 630px; /* Add explicit height */
+  margin-left: 100px;
+  overflow:hidden;
+}
+
+.banner-slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 14px;
+  display: block;
+}
+
+.banner-slideshow .slide.active {
+  opacity: 1;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 10px;
+  left: 79%;
+  transform: translate(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--text);
+  z-index: 5;
+}
+
+.slide-text h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+}
+
+.slide-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: #b8ecff;
+}
+
+.slide{ display:none; 
+  padding:10px 10px; 
+  text-align:center;
+  border-radius:8px; 
+}
+
+.slide img,.banner-slideshow img.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Shows entire image */
+  border-radius: 14px;
+}
+
+.slide.active{ 
+  display:block; 
+  transition:opacity 0.5s ease; 
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: transparent;
+  color: #00eaff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 46px;
+  font-weight: 700;
+  cursor: pointer;
+
+  /* glow */
+  text-shadow: 0 0 8px #00eaff, 
+               0 0 16px #00eaff, 
+               0 0 30px #00eaff;
+
+  transition: 0.2s ease;
+}
+
+.slide-btn:hover {
+  text-shadow: 0 0 12px #00eaff,
+               0 0 25px #00eaff,
+               0 0 40px #00eaff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slide-controls button:hover {
+  opacity: 0.8;
+}
+
+.slide-btn-left {
+  left: 20px; /* moves it OUTSIDE slideshow */
+}
+
+.slide-btn-right {
+  right: 20px; /* moves it OUTSIDE slideshow */
+}
+
+@media (max-width:600px){ 
+  .slide-btn-left{ left:8px } 
+  .slide-btn-right{ right:8px } 
+  .slide-btn{ font-size:36px } 
+  .slides-container {
+    height: 400px;
+  }
+  .slide-text {
+    bottom: 20px;
+    padding: 15px 20px;
+  }
+  .slide-text h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-container {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(0,255,255,0.4);
+  box-shadow: 0 0 10px rgba(0,255,255,0.15);
+  transition: 0.3s;
+  width: fit-content;
+  display: flex;
+}
+
+.contact-container:hover {
+  box-shadow: 0 0 25px #00eaff, 0 0 60px #0088ff;
+  transform: translateY(-4px);
+}
+
+.contact-title {
+  color: #00eaff;
+  margin: 20px;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+.contact-info {
+  color: #b8ecff;
+  font-size: 1rem;
+  margin: 20px;
+}
+
+/* Glow effect on hover */
+.contact-card:hover {
+  box-shadow: 0 0 25px #00eaff, 0 0 60px #0088ff;
+  transform: translateY(-4px);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(600px, 1fr) auto; /* intro card min 400px, expands */;
+  gap: 18px;
+  align-items: center;
+}
+
+.contact-title1 {
+  color: #00eaff;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.hero-wrap {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.quick-links {
+  border-top: 1px dashed rgba(255,255,255,0.08);
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.quick-links ul {
+  margin: 8px 0 0 16px;
+  padding: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transform: translateX(90px); /* move main content to the right */
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 450fr; /*grid-template-columns: 1fr 450px; increase right column */
+  gap: 28px;
+  align-items: start;
+}
+
+.section-title {
+  color: #00eaff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-shadow: 0 0 8px #00eaff;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.project-list, .award-list {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: white;
+}
+
+:root {
+  --glass: rgba(0,40,60,0.4);
+}
+
+/* Container for side-by-side layout */
+.hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* intro left, contact right */
+  gap: 50px;
+  align-items: start;
+}
+
+/* Card styling + glow */
+.card {
+  padding: 70px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 14px;
+  border: 1px solid rgba(0,255,255,0.3);
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,255,255,0.15);
+  margin-left: -250px;
+}
+
+.contact-card {
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,255,255,0.4);
+  box-shadow: 0 0 10px rgba(0,255,255,0.15);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px #00eaff, 0 0 60px #0088ff;
+  transform: translateY(-4px);
+}
+
+.project {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.project .img {
+  width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#062231,#043049);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.project .meta {
+  flex: 1;
+  font-size: 14px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project strong {
+  font-size: 18px;
+}
+
+.project p {
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.award {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.award .img {
+  width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#062231,#043049);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.award .meta {
+  flex: 1;
+  font-size: 14px;
+}
+
+.award-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.award strong {
+  font-size: 18px;
+}
+
+.award p {
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* Full width background, centered content */
+.container {
+  max-width: 1300px;   /* makes it look normal again */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Hero layout: left text + right contact card */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;  /* proportion-based, not forced px */
+  gap: 32px;
+  align-items: start;
+}
+
+/* prevent zoomed-in effect */
+section, header, main {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  text-align: center;          /* centers all text inside */
+  padding: 20px 10px;          /* some spacing around the footer */
+  /*background: var(--glass);     optional: adds a subtle background */
+  color: var(--text);          /* main text color */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;                    /* space between the two lines */
+  align-items: center;          /* ensures children are centered */
+  font-size: 0.9rem;           /* slightly smaller text */
+  margin-left: -10px;      /* align footer with main content */
+}
+
+footer .footer-sub {
+  color: var(--muted);         /* muted color for secondary info */
+}
+
+@media (max-width: 920px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+  /* Responsive - smaller on mobile */
+@media (max-width: 768px) {
+   .banner-slideshow {
+    height: 400px;
+  }
+}
