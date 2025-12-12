@@ -16,7 +16,6 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
 /* ===== HEADER & NAVIGATION ===== */
 .brand {
   display: flex;
@@ -221,7 +220,6 @@ main {
   box-shadow: 0 0 25px #00eaff, 0 0 60px #0088ff;
   transform: translateY(-4px);
 }
-
 /* ===== CONTACT SECTION ===== */
 .contact-container {
   padding: 20px;
@@ -348,6 +346,22 @@ main {
 .card.award {
   display: flex;
   flex-direction: column;
+  height: 330px;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.3);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  min-height: 200px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card.more-awards {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
   align-items: center;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(0,255,255,0.3);
@@ -528,7 +542,8 @@ input, textarea {
 .footer-right {
   display: flex;           /* put items in a row */
   gap: 20px;               /* space between each icon/link */
-  align-items: center;     /* vertically center them */
+  align-items: center;     
+  color: #b8ecff;
 }
 
 .portfolio-footer strong {
@@ -536,7 +551,6 @@ input, textarea {
 }
 
 .portfolio-footer a {
-  color: #00eaff;
   text-decoration: none;
   text-shadow: 0 0 4px #00eaff, 0 0 8px #00eaff;
   transition: 0.3s ease;
