@@ -9,7 +9,7 @@ Personal portfolio of **Onalenna**, showcasing **Data Analysis skills, projects,
 ## 🌟 About Me
 
 Hi, I'm **Onalenna**!  
-A third-year student passionate about **Data Analysis, Fintech, and Product Insights**.  
+A graduate trainee passionate about **Data Analysis, Fintech, and Product Insights**.  
 This portfolio demonstrates my skills and highlights key projects.
 
 ---
