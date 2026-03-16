@@ -35,6 +35,11 @@ header {
   border-bottom: 1px solid rgba(0,255,255,0.2);
 }
 
+.about-section p{
+  opacity: 0.9 ;
+  color: turquoise;
+}
+
 .brand {
   display: flex;
   gap: 40px;
