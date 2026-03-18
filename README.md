@@ -6,7 +6,7 @@ Personal portfolio of **Onalenna**, showcasing **Data Analysis skills, projects,
 
 ---
 
-## 🌟 About Me
+## About Me
 
 Hi, I'm **Onalenna**!  
 A graduate trainee passionate about **Data Analysis, Fintech, and Product Insights**.  
@@ -14,7 +14,7 @@ This portfolio demonstrates my skills and highlights key projects.
 
 ---
 
-## 💻 Features
+## Features
 
 - Fully **responsive design** for mobile, tablet, and desktop  
 - Interactive **banner slideshow** with project highlights  
@@ -26,14 +26,14 @@ This portfolio demonstrates my skills and highlights key projects.
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5 | CSS3 | JavaScript**  
 - **Supabase** for backend/contact storage  
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 🌐 [View Live Portfolio](https://nalenna.github.io/Nale-Portfolio/)
 
